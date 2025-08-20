@@ -115,9 +115,9 @@ nameerror.value='qwdwdwd'
 
 button.addEventListener('click',()=>{
 nameerror.textContent ='';
-emailerror.value =''
-passworderror.value =''
-confirmpassworderror.value =''
+emailerror.textContent ='';
+passworderror.textContent ='';
+confirmpassworderror.textContent ='';
 let  isValid =true
 
   if (fullname.classList.contains('errorBorder')) {
@@ -143,6 +143,9 @@ let  isValid =true
   }
   if (isValid == true) {
     success.style.display='block'
+  }else{
+    success.style.display='none'
+
   }
   
   
