@@ -81,7 +81,7 @@ password.addEventListener('input',()=>{
 })
 
 confirmpassword.addEventListener('input',()=>{
-  if (confirmpassword.value !== password.value) {
+  if (confirmpassword.value !== password.value || password.value == '') {
     confirmpassword.classList.add('errorBorder')
     confirmpassword.classList.remove('successBorder')
      
@@ -122,24 +122,47 @@ let  isValid =true
 
   if (fullname.classList.contains('errorBorder')) {
      nameerror.textContent='your name should have 3 or more characters.'
+     fullname.classList.add('errorBorder')
      isValid = false
+
       
+  }else{
+     fullname.classList.remove('errorBorder')
+
   }
     if (email.classList.contains('errorBorder')) {
      emailerror.textContent='email address is not valid.'
+     email.classList.add('errorBorder')
      isValid = false
+
       
   }  
+  else{
+    email.classList.remove('errorBorder')
+  } 
   if (password.classList.contains('errorBorder') ) {
      passworderror.textContent='your password should have 8 or more characters.'
+     password.classList.add('errorBorder')
      isValid = false
+
      
       
   }  
+  else{
+     password.classList.remove('errorBorder')
+
+  } 
   if (confirmpassword.classList.contains('errorBorder')) {
      confirmpassworderror.textContent='passwords do not match.'
+     confirmpassword.classList.add('errorBorder')
      isValid = false
+
+
       
+  }
+  else{
+    confirmpassword.classList.remove('errorBorder')
+
   }
   if (isValid == true) {
     success.style.display='block'
