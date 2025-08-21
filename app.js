@@ -120,7 +120,7 @@ passworderror.textContent ='';
 confirmpassworderror.textContent ='';
 let  isValid =true
 
-  if (fullname.classList.contains('errorBorder')) {
+  if (fullname.classList.contains('errorBorder') || fullname.value == '') {
      nameerror.textContent='your name should have 3 or more characters.'
      fullname.classList.add('errorBorder')
      isValid = false
@@ -130,7 +130,7 @@ let  isValid =true
      fullname.classList.remove('errorBorder')
 
   }
-    if (email.classList.contains('errorBorder')) {
+    if (email.classList.contains('errorBorder') || email.value == '') {
      emailerror.textContent='email address is not valid.'
      email.classList.add('errorBorder')
      isValid = false
@@ -140,7 +140,7 @@ let  isValid =true
   else{
     email.classList.remove('errorBorder')
   } 
-  if (password.classList.contains('errorBorder') ) {
+  if (password.classList.contains('errorBorder') || password.value == '') {
      passworderror.textContent='your password should have 8 or more characters.'
      password.classList.add('errorBorder')
      isValid = false
@@ -152,7 +152,7 @@ let  isValid =true
      password.classList.remove('errorBorder')
 
   } 
-  if (confirmpassword.classList.contains('errorBorder')) {
+  if (confirmpassword.classList.contains('errorBorder') || confirmpassword.value == '') {
      confirmpassworderror.textContent='passwords do not match.'
      confirmpassword.classList.add('errorBorder')
      isValid = false
